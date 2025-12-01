@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600&display=swap');
+
+:root {
+    --color-dashboard: #29B6F6;
+    --color-register:  #FFB74D;
+    --color-tracking:  #66BB6A;
+    --color-report:    #EF5350;
+    --color-settings:  #7E57C2;
+}
+
+body {
+    font-family: 'Prompt', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    min-width: 260px; max-width: 260px; min-height: 100vh;
+    background-color: #ffffff; padding: 20px;
+    border-right: 1px solid #f0f0f0;
+    box-shadow: 2px 0 15px rgba(0,0,0,0.03);
+    position: fixed; left: 0; top: 0; bottom: 0; z-index: 1000;
+}
+
+.nav-btn {
+    display: flex; align-items: center; padding: 12px 25px; margin-bottom: 12px;
+    border-radius: 50px; color: white; text-decoration: none; font-weight: 500;
+    transition: all 0.2s; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.nav-btn:hover { transform: translateY(-2px); color: white; filter: brightness(1.1); }
+.nav-btn i { width: 30px; font-size: 1.2rem; margin-right: 10px; text-align: center; }
+
+.btn-dashboard { background-color: var(--color-dashboard); }
+.btn-register  { background-color: var(--color-register); color: #fff; }
+.btn-tracking  { background-color: var(--color-tracking); }
+.btn-report    { background-color: var(--color-report); }
+.btn-settings  { background-color: var(--color-settings); }
+
+/* Layout & Header */
+.content-wrapper { width: 100%; margin-left: 260px; display: flex; flex-direction: column; min-height: 100vh; }
+
+/* Header Colors */
+.header-dashboard { background-color: var(--color-dashboard); }
+.header-register  { background-color: var(--color-register); }
+.header-tracking  { background-color: var(--color-tracking); }
+.header-report    { background-color: var(--color-report); }
+.header-settings  { background-color: var(--color-settings); }
+
+.page-content { padding: 40px; background-color: #fff; flex-grow: 1; border-radius: 20px 0 0 0; margin-top: -1px; }
+
+/* Inputs */
+.custom-input {
+    background-color: #f1f3f5 !important; border: 1px solid transparent;
+    border-radius: 50px; padding: 12px 25px; color: #495057;
+}
+.custom-input:focus { background-color: #fff !important; border-color: #ced4da; }
+
+/* Timeline */
+.timeline { border-left: 3px solid #e9ecef; margin-left: 10px; padding-left: 30px; position: relative; }
+.timeline-item { position: relative; margin-bottom: 35px; }
+.timeline-dot {
+    width: 20px; height: 20px; background: #adb5bd; border-radius: 50%;
+    position: absolute; left: -41px; top: 5px; border: 4px solid white; box-shadow: 0 0 0 1px #adb5bd;
+}
+.timeline-dot.active { background: var(--color-tracking); box-shadow: 0 0 0 1px var(--color-tracking); }
+
+/* --- เพิ่มใหม่: Dropdown Profile --- */
+.dropdown-menu { border-radius: 15px; border: none; box-shadow: 0 5px 20px rgba(0,0,0,0.1); padding: 10px; }
+.dropdown-item { border-radius: 10px; padding: 8px 15px; transition: 0.2s; }
+.dropdown-item:hover { background-color: #f0f2f5; color: var(--color-dashboard); transform: translateX(5px); }
